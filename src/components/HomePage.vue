@@ -2,10 +2,13 @@
 	<div class="container">
 		<h1>{{ msg }}</h1>
 		<p>
-			On this page you can create your very own HD graphics like trade
-			announcements, contract extensions or FA signings.
+			Please move to <router-link to="/trade">Trade</router-link> page to
+			see the working part.
 		</p>
-		<p>The plan for future is to display user created graphics here.</p>
+		<p>
+			The plan for future is to display user created graphics on this home
+			page.
+		</p>
 	</div>
 </template>
 
