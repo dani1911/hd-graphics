@@ -1,0 +1,36 @@
+{
+  "name": "hd-graphics",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "caniuse-lite": "^1.0.30001718",
+    "core-js": "^3.6.5",
+    "mitt": "^3.0.0",
+    "vue": "^3.0.0",
+    "vue-color-input": "^1.0.6",
+    "vue-html2canvas": "0.0.4",
+    "vue-router": "^4.0.0-0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.0.0",
+    "node-sass": "^7.0.1",
+    "prettier": "^2.2.1",
+    "sass": "^1.45.1",
+    "sass-loader": "^8.0.2"
+  }
+}

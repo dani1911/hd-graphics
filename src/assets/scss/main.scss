@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+@import '_variables.scss';
+@import '_cssreset.scss';
+
+html {
+	background: $color-light;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+}
+#app {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.main-header {
+	background-color: $color-primary;
+	width: 100%;
+
+	img {
+		height: 5rem;
+	}
+
+	h1 {
+		color: $color-secondary;
+	}
+}
+.hidden {
+	display: none;
+}
+.my-3 {
+	margin-block: $my-3;
+}
+.main-content {
+	flex: 1;
+	width: 100%;
+	padding-block: 1.5rem;
+}
+.main-footer {
+	background-color: $color-secondary;
+	width: 100%;
+	font-size: $font-size-5;
+}
+.container {
+	max-width: 82.5rem;
+	margin-inline: auto;
+}
+h1 {
+	font-size: $font-size-1;
+}
+.flex {
+	display: flex;
+}
+.f-row {
+	flex-direction: row;
+}
+.f-col {
+	flex-direction: column;
+}
+.f-wrap {
+	flex-wrap: wrap;
+}
+.f-justify-center {
+	justify-content: center;
+}
+.f-align-items-center {
+	align-items: center;
+}
+.f-gap-1 {
+	gap: 1rem;
+}
+a:not(link) {
+	color: $color-black;
+}
+.btn {
+	cursor: pointer;
+	background-color: $color-primary;
+	color: $color-light;
+	border: none;
+	text-align: center;
+	display: block;
+}
+.btn-rect {
+	padding: 0.5em 0.75em;
+}
+.btn-round {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100%;
+	line-height: 1;
+	font-size: $font-size-5;
+	font-weight: 700;
+	width: 1.25em;
+	height: 1.25em;
+}
+.btn:hover,
+.btn:focus {
+	box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.75);
+}
+.btn-success {
+	background-color: $color-success;
+}
+.btn-error {
+	background-color: $color-warning;
+}
+.btn-over {
+	z-index: 1000;
+	position: absolute;
+}
+.remove {
+	cursor: pointer;
+	color: $color-warning;
+	font-weight: 700;
+	font-size: $font-size-5;
+}
+.edit,
+.delete,
+.confirm,
+.reset {
+	cursor: pointer;
+	display: inline-block;
+	margin-left: 0.2em;
+}
+// .reset {
+// 	border-radius: 3px;
+// 	line-height: 1;
+// 	width: 1em;
+// 	height: 1em;
+// 	text-align: center;
+// 	color: $color-white;
+// 	background-color: $color-warning;
+// }
+.delete,
+.reset {
+	color: $color-warning;
+}
+.confirm {
+	color: $color-success;
+}
+.box {
+	padding: 1.25rem;
+	border: 1px solid rbga(0, 0, 0, 0.5);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	background-color: $color-white;
+}
+.general-info {
+	width: 30%;
+}
+.general-info img {
+	margin: auto auto 0;
+}
+.general-info .heading {
+	margin: 1em auto auto;
+	text-align: center;
+	font-size: 4rem;
+	font-weight: 900;
+	line-height: 1;
+	font-style: italic;
+}
+.trade-info {
+	width: 70%;
+}
+.trade-container {
+	width: 75%;
+}
+.trade-content {
+	flex: 1;
+	width: 980px;
+	max-width: 980px;
+	height: 600px;
+	padding: 1rem 1rem 1rem 0;
+	background: rgba(0, 0, 0, 0.9);
+
+	.heading {
+		color: $color-secondary;
+	}
+}
+.assets,
+.team-identity {
+	position: relative;
+	width: 53%;
+	height: 250px;
+	padding: 0.25rem 1rem;
+	box-shadow: inset 0 1px 5px -2px rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+}
+.assets {
+	background: $color-light;
+	border-radius: 5px 0 0 5px;
+}
+.asset-heading {
+	position: absolute;
+	top: 0.5em;
+	left: 50%;
+	transform: translateX(-50%);
+	font-family: 'Montserrat', sans-serif;
+	font-size: $font-size-2;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.asset {
+	position: relative;
+	z-index: 40;
+	cursor: pointer;
+	white-space: nowrap;
+
+	a {
+		display: none;
+	}
+
+	&:hover {
+		a {
+			display: inline-block;
+		}
+	}
+}
+.divider {
+	position: relative;
+	top: -5px;
+	width: 4%;
+	height: 260px;
+	border-radius: 3px;
+	background: linear-gradient(
+		to right,
+		rgba(0, 0, 0, 0.45) 0%,
+		rgba(0, 0, 0, 0.05) 20% 80%,
+		rgba(0, 0, 0, 0.45) 100%
+	);
+	background-color: $color-light;
+	// box-shadow: inset 2px 0 4px rgba(0, 0, 0, 0.45),
+	// 	inset -2px 0 4px rgba(0, 0, 0, 0.25), 2px 0 3px 0px rgba(0, 0, 0, 0.5);
+	z-index: 40;
+}
+.team-identity {
+	border-radius: 0 5px 5px 0;
+}
+.team-league {
+	position: absolute;
+	bottom: 0;
+	right: 0.3em;
+	font-size: $font-size-4;
+	text-align: right;
+}
+.assets::before,
+.team-identity::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+.assets::before {
+	background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.65));
+}
+.team-identity::before {
+	background: linear-gradient(
+			to bottom,
+			rgba(255, 255, 255, 0.09) 0%,
+			rgba(255, 255, 255, 0.15) 51.5%,
+			rgba(255, 255, 255, 0) 52.5%
+		),
+		linear-gradient(rgb(0 0 0 / 0.15) 60%, rgb(0 0 0 / 0.55) 97%),
+		linear-gradient(
+			to top,
+			rgba(255, 255, 255, 0.5) 0%,
+			rgba(255, 255, 255, 0) 2%
+		),
+		linear-gradient(
+			to left,
+			rgba(255, 255, 255, 0.5) 0%,
+			rgba(255, 255, 255, 0) 1%
+		);
+}
+.assets::after,
+.team-identity::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 10px;
+	background: linear-gradient(
+		rgba(255, 255, 255, 0.35) 20%,
+		rgba(255, 255, 255, 0.1) 40%,
+		rgba(255, 255, 255, 0.01) 55%
+	);
+	z-index: 30;
+}
+.team-name {
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-size: $font-size-3;
+	font-weight: 500;
+	line-height: 1.2;
+	margin: 0 auto;
+	padding-top: 0.5em;
+	z-index: 30;
+}
+.team-logo {
+	width: 80%;
+	height: 175px;
+	margin: auto;
+
+	img {
+		max-height: 100%;
+	}
+}
+.controls {
+	width: 25%;
+}
+.aside-heading {
+	text-align: center;
+	position: relative;
+
+	a {
+		position: absolute;
+		right: 1em;
+	}
+}
+fieldset {
+	border: none;
+}
+.label {
+	display: inline-flex;
+	font-size: $font-size-4;
+}
+input[type='text'],
+select {
+	width: 100%;
+	padding: 0.5rem;
+	border: 1px solid gray;
+}
+input[type='file'] {
+	width: 100%;
+	border: 1px solid gray;
+}
+input[type='file']::file-selector-button {
+	cursor: pointer;
+	border: none;
+	padding: 0.65rem;
+	height: 100%;
+	background-color: #efefef;
+	transition: 1s;
+}
+input[type='file']::file-selector-button:hover {
+	background-color: #ccc;
+}
+.team-colors {
+	label {
+		width: 50%;
+	}
+}
+.color-input.user {
+	.box {
+		padding: 0;
+		width: 4.5em;
+		height: 2em;
+		margin-inline: 0.5em;
+		border-radius: 0;
+		box-shadow: none;
+		border: 1px solid grey;
+	}
+	.box {
+		&.active {
+			.inner {
+				transform: none;
+			}
+		}
+	}
+}
+
+.note {
+    padding-block: .75rem;
+}
+/* VUE ANIMATIONS */
+
+[v-cloak] {
+	display: none;
+}
+
+.asset-enter-active,
+.asset-leave-active {
+	transition: all 2s;
+}
+.asset-enter-from,
+.asset-leave-to {
+	opacity: 0;
+	transform: scale(0.75);
+}
